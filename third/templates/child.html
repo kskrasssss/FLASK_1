@@ -1,0 +1,35 @@
+{# templates/child.html #}
+
+{% extends "menu.html" %}
+
+{% block content %}
+<h1>Welcome to {{ title }}!</h1>
+<table>{% block table %}
+    <tr>
+        <td>{{ A }}</td>
+        <td>{{ B }}</td>
+        <td>{{ C }}</td>
+    </tr>
+    <tr>
+        <td>{{ a }}</td>
+        <td>{{ b }}</td>
+        <td>{{ c }}</td>
+    </tr>
+    <tr>
+        <td>{{ d }}</td>
+        <td>{{ e }}</td>
+        <td>{{ f }}</td>
+    </tr>
+    <tr>
+        <td>{{ g }}</td>
+        <td>{{ h }}</td>
+        <td>{{ i }}</td>
+    </tr>
+    <tr>
+        <td>{{ j }}</td>
+        <td>{{ k }}</td>
+        <td>{{ l }}</td>
+    </tr>{% endblock table %}
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{% endblock content %}

@@ -1,0 +1,22 @@
+body{
+    background-color: #F4AB23FF ;
+}
+
+h1 {
+    text-align: center;
+}
+table {
+    background-color: #E6A121FF;
+    border-radius: 12px;
+    border-spacing: 10px;
+    box-sizing: 5px;
+    margin: auto;
+    width: 50%;
+    border: 3px black;
+    padding: 10px;
+    
+}
+
+tr {
+    font-weight: 900;
+}
