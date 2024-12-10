@@ -1,50 +1,21 @@
 from flask import Flask, render_template
 app = Flask(__name__, template_folder='templates', static_folder="static")
 
-
-A = 'Name'
-B = 'Ingridients'
-C = 'Price'
-
-a = 'Mozzarela'
-b = f'cheese, basil, tomatoes'
-c = 120
-
-d = 'Carbonara'
-e = f'basil, eggs, Parmesan, Mozzarela'
-f = 130
-
-g = 'Pepperoni'
-h = f'salami, cream sauce, basil, tomatoes'
-i = 85
-
-j = 'Four cheese'
-k = f'Parmesan, Adyghe, Mozzarella, Dorblu'
-l = 90
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/menu')
 def menu():
+    pizza = [
+        {'name': 'Mozzarela', 'ingridients': 'cheese, basil, tomatoes', 'price': 120},
+        {'name': 'Carbonara', 'ingridients': 'basil, eggs, Parmesan, Mozzarela', 'price': 75},
+        {'name': 'Pepperoni', 'ingridients': 'salami, cream sauce, basil, tomatoes', 'price': 90},
+        {'name': 'Four cheese', 'ingridients': 'Parmesan, Adyghe, Mozzarella, Dorblu', 'price': 110},
+    ]
+
     context = {
-        'title': "Menu restaurant",
-        'A': A,
-        'B': B,
-        'C': C,
-        'a': a,
-        'b': b,
-        'c': c,
-        'd': d,
-        'e': e,
-        'f': f,
-        'g': g,
-        'h': h,
-        'i': i,
-        'j': j,
-        'k': k,
-        'l': l,
+        'pizza': pizza,
     }
     return render_template('menu.html', **context)
 
