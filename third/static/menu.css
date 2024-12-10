@@ -4,6 +4,7 @@ body{
 
 h1 {
     text-align: center;
+    padding: 10px;
 }
 table {
     background-color: #E6A121FF;
@@ -19,4 +20,8 @@ table {
 
 tr {
     font-weight: 900;
+}
+
+content {
+    background-color: #F4AB23FF ;
 }
